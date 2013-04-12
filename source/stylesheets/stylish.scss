@@ -1,0 +1,181 @@
+/* 
+	These are the base styles for Stylish. 
+	They shouldn't really need to be edited.
+	They shouldn't be used in the main HTML.
+*/
+
+@import "compass";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.stylish-header {
+  @include box-sizing(border-box);
+	padding: 0.5em 1em;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	font-size: 16px;
+	background: rgb(52,73,94);
+	border-bottom: 1px solid rgb(45,62,80);
+
+  nav {
+    a {
+      color: rgb(236,240,241);
+      text-decoration: none;
+      margin-right: 1.5em;
+
+      &:hover {
+        color: rgb(243,156,17);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.stylish-hidden {
+	display: none;
+}
+
+.stylish-example {
+  margin-bottom: 3em;
+  
+  .stylish-example-display {
+    border: 1px solid #e1e1e8;
+    margin: 0;
+    padding: 2.5em 1em 1em;
+    position: relative;
+
+    &:before {
+      color: rgb(154,154,154);
+      content: 'Example';
+      border-right: 1px solid #e1e1e8;
+      border-bottom: 1px solid #e1e1e8;
+      border-radius: 0 0 0.5em 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 0.875em;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+      font-weight: 300;
+      padding: 0.25em 0.75em;
+      background-color: rgb(245,245,245);
+    }
+  }
+}
+
+/* 
+  Prettify styles
+*/
+
+.com { color: #93a1a1; }
+.lit { color: #195f91; }
+.pun, .opn, .clo { color: #93a1a1; }
+.fun { color: #dc322f; }
+.str, .atv { color: #D14; }
+.kwd, .prettyprint .tag { color: #1e347b; }
+.typ, .atn, .dec, .var { color: teal; }
+.pln { color: #48484c; }
+
+.prettyprint {
+  margin: 0;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-top: none;
+  overflow: auto;
+}
+
+ol.linenums {
+  margin: 0;
+
+  li {
+    padding-left: 1em;
+    color: #bebec5;
+    line-height: 20px;
+    text-shadow: 0 1px 0 #fff;
+    background: rgb(255,255,255);
+  }
+}
+
+/* 
+	Handle the responsive nature of Stylish
+*/
+
+@media all and (max-width: 500px) {
+  .stylish-toggle {
+  	display: block;
+    
+    @include box-sizing(border-box);
+    padding: 0.5em 1em;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    font-size: 16px;
+    background: rgb(52,73,94);
+    border-bottom: 1px solid rgb(45,62,80);
+
+    a {
+      color: rgb(236,240,241);
+      text-decoration: none;
+      margin-right: 1.5em;
+
+      &:hover {
+        color: rgb(243,156,17);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .stylish-container {
+    padding-top: 0;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    -webkit-transition: -webkit-transform 500ms ease;
+    -moz-transition: -moz-transform 500ms ease;
+    -o-transition: -o-transform 500ms ease;
+    transition: transform 500ms ease;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    &.stylish-active {
+      -webkit-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
+      -moz-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
+      -ms-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
+      -o-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
+      transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
+    }
+  }
+
+  .stylish-header {
+    position: absolute;
+    width: 70%;
+    top: 0;
+    bottom: 0;
+    background: rgb(54,54,54);
+
+    -webkit-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+    box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
