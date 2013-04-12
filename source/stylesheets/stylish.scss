@@ -118,10 +118,12 @@ ol.linenums {
       color: rgb(236,240,241);
       text-decoration: none;
       margin-right: 1.5em;
+      font-size: 1.75em;
+      display: inline-block;
+      padding: 0.25em;
 
       &:hover {
         color: rgb(243,156,17);
-        text-decoration: underline;
       }
     }
   }
@@ -161,6 +163,7 @@ ol.linenums {
     top: 0;
     bottom: 0;
     background: rgb(54,54,54);
+    padding: 0;
 
     -webkit-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
     -moz-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
@@ -177,5 +180,16 @@ ol.linenums {
     -ms-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
+
+    nav {
+      a {
+        margin: 0;
+        display: block;
+        border-bottom: 1px solid rgba(255,255,255,0.09);
+        padding: 1em;
+        font-weight: bold;
+        font-size: 1.25em;
+      }
+    }
   }
 }
