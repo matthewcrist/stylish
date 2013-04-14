@@ -13,22 +13,22 @@ body {
 
 .stylish-header {
   @include box-sizing(border-box);
-	padding: 0.5em 1em;
+	padding: 0.875em 1em;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	font-weight: 300;
 	font-size: 16px;
-	background: rgb(52,73,94);
-	border-bottom: 1px solid rgb(45,62,80);
+	background: rgb(240,240,240);
+	border-bottom: 1px solid rgb(229,229,229);
 
   nav {
     a {
-      color: rgb(236,240,241);
+      font-size: 0.875em;
+      color: rgb(54,54,54);
       text-decoration: none;
       margin-right: 1.5em;
 
       &:hover {
-        color: rgb(243,156,17);
-        text-decoration: underline;
+        color: rgb(63,148,208);
       }
     }
   }
@@ -112,7 +112,6 @@ ol.linenums {
     font-weight: 300;
     font-size: 16px;
     background: rgb(52,73,94);
-    border-bottom: 1px solid rgb(45,62,80);
 
     a {
       color: rgb(236,240,241);
@@ -162,7 +161,7 @@ ol.linenums {
     width: 70%;
     top: 0;
     bottom: 0;
-    background: rgb(54,54,54);
+    background: rgb(240,240,240);
     padding: 0;
 
     -webkit-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
@@ -185,7 +184,8 @@ ol.linenums {
       a {
         margin: 0;
         display: block;
-        border-bottom: 1px solid rgba(255,255,255,0.09);
+        border-top: 1px solid rgba(255,255,255,0.59);
+        border-bottom: 1px solid rgba(0,0,0,0.09);
         padding: 1em;
         font-weight: bold;
         font-size: 1.25em;

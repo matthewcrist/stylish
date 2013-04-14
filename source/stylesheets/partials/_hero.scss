@@ -1,0 +1,55 @@
+.hero {
+	background: rgb(206,10,49);
+	color: rgb(255,255,255);
+	text-align: center;
+
+	.wrapper {
+		margin: 0 auto;
+		padding: 5em 2em;
+	}
+
+	h1 {
+		color: rgb(255,255,255);
+		font-size: 7em;
+		letter-spacing: -2px;
+
+		@include breakpoint(tablet) {
+			font-size: 6.5em;
+		}
+
+		@include breakpoint(wide) {
+			font-size: 8em;
+		}
+
+		@include breakpoint(phone) {
+			font-size: 5em;
+		}
+
+		&:before {
+			font-family: 'FontAwesome';
+			content: "\f109";
+			margin-right: 0.25em;
+			color: rgb(241,196,15);
+
+			@include breakpoint(tablet) {
+				content: "\f10a";
+			}
+
+			@include breakpoint(wide) {
+				content: "\f108";
+			}
+
+			@include breakpoint(phone) {
+				content: "\f10b";
+			}
+		}
+	}
+
+	.hero-text {
+		font-size: 1.593em;
+
+		@include breakpoint(phone) {
+			font-size: 1.25em;
+		}
+	}
+}
