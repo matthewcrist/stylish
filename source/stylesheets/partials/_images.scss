@@ -1,0 +1,30 @@
+figure {
+	margin: 0;
+	padding: 0;
+	background: rgb(245,245,245);
+
+	img {
+		width: 100%;
+	}
+
+	figcaption {
+		padding: 1.14285714286em;
+		font-size: 0.875em;
+	}
+
+	&.hero-image {
+		margin-bottom: 1em;
+	}
+
+	&.pull-left {
+		float: left;
+		width: 25%;
+		margin: 0 1em 1em 0;
+	}
+
+	&.pull-right {
+		float: right;
+		width: 25%;
+		margin: 0 0 1em 1em;
+	}
+}

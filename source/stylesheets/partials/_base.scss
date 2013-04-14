@@ -7,13 +7,29 @@
 body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	font-weight: 300;
+	color: rgb(54,54,54);
 }
 
 .wrapper {
 	max-width: 60em;
-	margin: 1.25em auto 4em;
+	margin: 1.25em auto 1.25em;
+	padding-bottom: 4em;
 
 	@include breakpoint(tablet) {
 		padding: 0 1.25em;
+	}
+}
+
+p {
+	font-size: 1.593em;
+	line-height: 1.4;
+	font-family: georgia, serif;
+
+	@include breakpoint(tablet) {
+		font-size: 1.75em;
+	}
+
+	@include breakpoint(phone) {
+		font-size: 1.25em;
 	}
 }
