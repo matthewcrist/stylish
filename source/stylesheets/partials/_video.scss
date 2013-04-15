@@ -27,23 +27,3 @@
 		margin: 0 0 1em 1em;
 	}
 }
-
-@media screen and (max-width: 56.25em) {
-	.video {
-		.video-pull-left, .video-pull-right {
-			width: 50%;
-			padding-bottom: 28.125%;
-		}
-	}
-}
-
-@media screen and (max-width: 40em) {
-	.video {
-		.video-pull-left, .video-pull-right {
-			float: none;
-			width: 100%;
-			padding-bottom: 56.25%;
-			margin: 0 0 1em;
-		}
-	}
-}
