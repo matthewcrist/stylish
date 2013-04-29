@@ -1,4 +1,5 @@
 $pad: 1.25em;
+$width: 100%;
 
 .grid {
   background: white;
@@ -29,20 +30,40 @@ $pad: 1.25em;
   .grid &:nth-of-type(2) {
     background: rgb(189,195,199);
   }
+
+  @include breakpoint(phone) {
+    float: none;
+  }
 }
 
 .col-3-4 {
   width: 75%;
+
+  @include breakpoint(phone) {
+    width: $width;
+  }
 }
 
 .col-1-2 {
   width: 50%;
+
+  @include breakpoint(phone) {
+    width: $width;
+  }
 }
 
 .col-1-4 {
   width: 25%;
+
+  @include breakpoint(phone) {
+    width: $width;
+  }
 }
 
 .col-1-8 {
   width: 12.5%;
+
+  @include breakpoint(phone) {
+    width: $width;
+  }
 }

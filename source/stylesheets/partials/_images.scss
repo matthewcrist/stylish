@@ -16,15 +16,24 @@ figure {
 		margin-bottom: 1em;
 	}
 
-	&.pull-left {
+	&.pull-left, &.pull-right {
 		float: left;
 		width: 25%;
 		margin: 0 1em 1em 0;
+
+		@include breakpoint(tablet) {
+			width: 50%;
+		}
+
+		@include breakpoint(phone) {
+			width: 100%;
+			float: none;
+			margin: 0 0 1em;
+		}
 	}
 
 	&.pull-right {
 		float: right;
-		width: 25%;
 		margin: 0 0 1em 1em;
 	}
 }
