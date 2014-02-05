@@ -10,8 +10,8 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= data.page.title || "The Middleman" %></title>
     
-    <%= stylesheet_link_tag "stylish","guide","/fonts/font-awesome/css/font-awesome.min.css" %>
-    <%= javascript_include_tag  "all","stylish" %>
+    <%= stylesheet_link_tag "stylish/stylish","guide","/fonts/font-awesome/css/font-awesome.min.css" %>
+    <%= javascript_include_tag  "all","stylish/stylish" %>
   </head>
   
   <body class="<%= page_classes %>">

@@ -1,7 +1,7 @@
 /* 
-	These are the base styles for Stylish. 
-	They shouldn't really need to be edited.
-	They shouldn't be used in the main HTML.
+  These are the base styles for Stylish. 
+  They shouldn't really need to be edited.
+  They shouldn't be used in the main HTML.
 */
 
 @import "compass";
@@ -11,38 +11,85 @@ body {
   padding: 0;
 }
 
+.stylish-header, .stylish-toggle {
+  display: none;
+}
+
+.stylish-show .stylish-header {
+  display: block
+}
+
 .stylish-header {
   @include box-sizing(border-box);
-	padding: 0.875em 1em;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	font-weight: 300;
-	font-size: 16px;
-	background: rgb(240,240,240);
-	border-bottom: 1px solid rgb(229,229,229);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  background: rgb(245,245,245);
+  border-bottom: 1px solid rgb(225,225,225);
+  text-align: left;
 
   nav {
+    strong {
+      margin-left: 1.5em;
+    }
+
     a {
+      line-height: 3;
       font-size: 0.875em;
-      color: rgb(54,54,54);
+      color: rgb(108,108,108);
       text-decoration: none;
-      margin-right: 1.5em;
+      margin-left: 0.75em;
 
       &:hover {
-        color: rgb(63,148,208);
+        text-decoration: underline;
       }
     }
   }
 }
 
+.stylish-wrapper {
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 2em 0;
+
+  .stylish-toc {
+    width: 20%;
+    float: left;
+
+    ul {
+      border: 1px solid rgb(225,225,232);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      border-top: 1px solid rgb(225,225,232);
+
+      &:first-child {
+        border-top: none;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 0.5em;
+    }
+  }
+
+  .stylish-examples {
+    margin-left: 22.5%;
+  }
+}
+
 .stylish-hidden {
-	display: none;
+  display: none;
 }
 
 .stylish-example {
   margin-bottom: 3em;
   
   .stylish-example-display {
-    border: 1px solid #e1e1e8;
+    border: 1px solid rgb(225,225,232);
     margin: 0;
     padding: 2.5em 1em 1em;
     position: relative;
@@ -86,6 +133,10 @@ body {
   overflow: auto;
 }
 
+.stylish-example-alone.prettyprint {
+    border-top: 1px solid #e1e1e8;
+}
+
 ol.linenums {
   margin: 0;
 
@@ -98,56 +149,34 @@ ol.linenums {
   }
 }
 
-@media all and (max-width: 50em) {
+/* 
+  Handle the responsive nature of Stylish
+*/
+
+@media all and (max-width: 500px) {
+  .stylish-show .stylish-toggle {
+    display: block;
+  }
+
   .stylish-toggle {
     @include box-sizing(border-box);
-    display: block;
     padding: 0.5em 1em;
-    font-size: 16px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-weight: 300;
+    font-size: 16px;
     background: rgb(52,73,94);
+    border-bottom: 1px solid rgb(45,62,80);
 
     a {
       color: rgb(236,240,241);
       text-decoration: none;
+      margin-right: 1.5em;
       font-size: 1.75em;
       display: inline-block;
       padding: 0.25em;
 
       &:hover {
-          color: rgb(243,156,17);
-      }
-    }
-  }
-
-  .stylish-header {
-    position: absolute;
-    width: 70%;
-    top: 0;
-    bottom: 0;
-    background: rgb(240,240,240);
-    padding: 0;
-
-    -webkit-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
-    box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
-
-    -webkit-transform: translate3d(-100%, 0, 0);
-    -moz-transform: translate3d(-100%, 0, 0);
-    -ms-transform: translate3d(-100%, 0, 0);
-    -o-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-
-    nav {
-      a {
-        margin: 0;
-        display: block;
-        border-top: 1px solid rgba(255,255,255,0.59);
-        border-bottom: 1px solid rgba(0,0,0,0.09);
-        padding: 1em;
-        font-weight: bold;
-        font-size: 1.25em;
+        color: rgb(243,156,17);
       }
     }
   }
@@ -178,6 +207,49 @@ ol.linenums {
       -ms-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
       -o-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
       transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
+    }
+  }
+
+  .stylish-header {
+    position: absolute;
+    width: 70%;
+    top: 0;
+    bottom: 0;
+    background: rgb(245,245,245);
+    padding: 0;
+
+    -webkit-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+    box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    nav {
+
+      a, strong {
+        margin: 0;
+        display: block;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        border-top: 1px solid rgba(255,255,255,0.6);
+        padding: 0.75em 1em;
+        font-weight: bold;
+        font-size: 1.25em;
+        line-height: 1;
+      }
+
+      a {
+        padding-left: 2em;
+      }
     }
   }
 }
